@@ -1,9 +1,0 @@
-# Project place file
-/London.rbxlx
-
-# Roblox Studio lock files
-/*.rbxlx.lock
-/*.rbxl.lock
-
-# Ignore file
-roblox.toml
