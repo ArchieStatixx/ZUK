@@ -104,6 +104,3 @@ getHumanoid = function(v)
         return h 
     end
 
-
-    
-
