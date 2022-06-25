@@ -85,3 +85,25 @@ local getHelifromChild = function(v)
     return func 
 end
 
+
+
+local getHumanoidFromChild = function(v)
+getHumanoid = function(v)
+    local humanoid = v.Parent:FindFirstChild("Humanoid")
+        if humanoid ~= nil then
+            return humanoid
+            elseif v == workspace then
+                return nil
+            else
+                return getHumanoid(v.Parent)
+            end
+        end
+
+        local h = getHumanoid(v)
+
+        return h 
+    end
+
+
+    
+
