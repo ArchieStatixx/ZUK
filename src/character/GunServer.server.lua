@@ -78,5 +78,5 @@ function GunScript:FireGun()
     CurrentGunStats.Bullets = CurrentGunStats.Bullets - 1 
     GunScript:UpdateUI()
     Pushback:Play()
-    game.ReplicatedStorage.GunEvents.GunSound
+    game.ReplicatedStorage.GunEvents.GunSound:FireServer(CurrentGun:WaitForChild("Emitter"):WaitForChild("GunShot"))
 end
