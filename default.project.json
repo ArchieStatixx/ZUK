@@ -17,7 +17,7 @@
 
     "StarterPlayer": {
       "StarterPlayerScripts": {
-        "Client": {
+        "Character": {
           "$path": "src/client"
         }
       }

@@ -45,16 +45,38 @@ function GunScript:Reload()
         CancelReload = false
         GunCursor.Parent.Ammo.Text = "RELOADING"
         GunCursor.Parent.Ammo.Background.ImageColor3 = Color3.fromRGB(0,0,0)
-        game.ReplicatedStorage.Events.GunSound:FireServer(CurrentGun.Handle.Reload)
+        game.ReplicatedStorage.GunEvents.GunSound:FireServer(CurrentGun.Handle.Reload)
         Reload:Play()
-        game.ReplicatedStorage.Events.GunReload:FireServer(CurrentGun, CurrentGunStats.ReloadSpeed)
+        game.ReplicatedStorage.GunEvents.GunReload:FireServer(CurrentGun, CurrentGunStats.ReloadSpeed)
         wait(2)
         if not CancelReload then
             GunCursor.Parent.Ammo.Text = "RELOADING"
             CurrentGunStats.Bullets = CurrentGunStats.ClipSize
-            
+            self:UpdateUI()
+            Reloading = false 
+        else
+            Reloading = false
+            self:UpdateUI()
+            CancelReload = false 
         end
     end)
 end
 
+function FireGun(A, B, Sender, NotPlayer)
+	local NewRay = Ray.new(A, (B - A).unit * 300)
+	local Part, Pos = workspace:FindPartOnRay(NewRay, Sender.Character, false, true)
+	return Part, Pos
+end
 
+
+function GunScript:FireGun()
+    local Target = Mouse.Target
+    if Player.Character.Humanoid.Health <= 0 then
+        return
+    end
+        local Hit = Mouse.Hit.p
+    CurrentGunStats.Bullets = CurrentGunStats.Bullets - 1 
+    GunScript:UpdateUI()
+    Pushback:Play()
+    game.ReplicatedStorage.GunEvents.GunSound
+end
