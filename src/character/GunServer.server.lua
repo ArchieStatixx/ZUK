@@ -104,7 +104,6 @@ function GunScript.Equip(Gun)
 		CurrentGunStats = require(Root:FindFirstChild(Gun.Name))
 		CurrentGunStats.Bullets = 0 --CurrentGunStats.ClipSize (REPLACED)
 	else
-		--SavedStats[Gun.Name].Bullets = 0
 		CurrentGunStats = SavedStats[Gun.Name]
 	end
 	CurrentGunName = Gun.Name
