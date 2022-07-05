@@ -9,6 +9,12 @@
       }
     },
 
+    "ReplicatedFirst": {
+      "Main": {
+        "$path": "src/RFirst"
+      }
+    },
+
     "ServerScriptService": {
       "Server": {
         "$path": "src/server"
@@ -17,8 +23,16 @@
 
     "StarterPlayer": {
       "StarterPlayerScripts": {
-        "Client": {
+        "Character": {
           "$path": "src/client"
+        }
+      }
+    },
+
+    "StarterPlayer": {
+      "StarterCharacterScripts": {
+        "Client": {
+          "$path": "src/character"
         }
       }
     },

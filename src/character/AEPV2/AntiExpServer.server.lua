@@ -9,8 +9,8 @@ local StarterCharacter = game:GetService("StarterCharacterScripts")
 
 local NonCollide = {} --Will check for any parts which have CanCollide off aka doors so it won't trigger | TBD
 
---local HRP = script.Parent:FindFirstChild("HumanoidRootPart")
---local LastVector = HRP.Position
+local HRP = script.Parent:FindFirstChild("HumanoidRootPart")
+local LastVector = HRP.Position
 
 local function FlightPrevention(Obj)
     if Obj:IsA("BodyForce") or Obj:IsA("BodyMover") or Obj:IsA("BodyGyro") or Obj:IsA("BodyPosition") then

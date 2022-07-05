@@ -1,5 +1,5 @@
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
-local Events = ReplicatedStorage:WaitForChild("Events")
+local Events = ReplicatedStorage:WaitForChild("GameHandler")
 local ChangeTeamEvent = Events:WaitForChild("ChangeTeamEvent")
 
 local LoggerServerBanList = {}
