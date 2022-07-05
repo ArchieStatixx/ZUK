@@ -19,6 +19,6 @@ This git is strictly under a MIT license managed by the Lead Developer and DAA, 
 - Noti_Field
 
 
-# Developers who can approve there own code
+# Developers who can approve their own code
 
 - Still_Ace
