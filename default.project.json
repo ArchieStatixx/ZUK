@@ -9,6 +9,12 @@
       }
     },
 
+    "ReplicatedFirst": {
+      "Main": {
+        "$path": "src/RFirst"
+      }
+    },
+
     "ServerScriptService": {
       "Server": {
         "$path": "src/server"
