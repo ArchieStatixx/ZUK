@@ -15,3 +15,9 @@ This git is strictly under a MIT license managed by the Lead Developer and DAA, 
 # Senior Developers
 - ArchieStatixx
 - K_ierah
+- Noti_Field
+
+
+# Developers who can approve there own code
+
+- Still_Ace
