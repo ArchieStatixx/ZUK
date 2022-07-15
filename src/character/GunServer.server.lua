@@ -102,7 +102,7 @@ function GunScript.Equip(Gun)
 	UI = Player:WaitForChild("PlayerGui"):WaitForChild("GunUI")
 	if not SavedStats[Gun.Name] then
 		CurrentGunStats = require(Root:FindFirstChild(Gun.Name))
-		CurrentGunStats.Bullets = 0 --CurrentGunStats.ClipSize (REPLACED)
+		CurrentGunStats.Bullets = 0 
 	else
 		CurrentGunStats = SavedStats[Gun.Name]
 	end
